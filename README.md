@@ -42,5 +42,10 @@ mvn clean install
 
 # News and noteworthy
 
-v1.0.0 - work in progress
+v1.0.0 - 2026-10-18
 * Initial version with `ph-codelists-unit`, including machine translated German names
+
+---
+
+My personal [Coding Styleguide](https://github.com/phax/meta/blob/master/CodingStyleguide.md) |
+It is appreciated if you star the GitHub project if you like it.

@@ -55,6 +55,7 @@ public final class UnitCodesTest
     assertTrue (UnitCodes.containsID ("KGM"));
     assertFalse (UnitCodes.containsID ("kgm"));
     assertFalse (UnitCodes.containsID (null));
+    assertFalse (UnitCodes.containsID (""));
     assertNull (UnitCodes.getFromIDOrNull ("does-not-exist"));
   }
 
