@@ -22,6 +22,7 @@ import java.util.Locale;
 import org.jspecify.annotations.NonNull;
 
 import com.helger.annotation.Nonempty;
+import com.helger.annotation.concurrent.Immutable;
 import com.helger.base.enforce.ValueEnforcer;
 import com.helger.base.equals.EqualsHelper;
 import com.helger.base.hashcode.HashCodeGenerator;
@@ -34,6 +35,7 @@ import com.helger.text.resourcebundle.ResourceBundleHelper;
  *
  * @author Philip Helger
  */
+@Immutable
 public final class UnitCode implements IUnitCode
 {
   private final String m_sID;

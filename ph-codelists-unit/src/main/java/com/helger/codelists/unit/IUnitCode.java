@@ -34,6 +34,8 @@ import com.helger.text.display.IHasDisplayText;
 public interface IUnitCode extends IHasID <String>, IHasDisplayName, IHasDisplayText
 {
   /**
+   * Get the unit code ID
+   *
    * @return The code, like <code>C62</code>, <code>KGM</code> or <code>XPP</code>. Neither
    *         <code>null</code> nor empty.
    */
@@ -42,12 +44,16 @@ public interface IUnitCode extends IHasID <String>, IHasDisplayName, IHasDisplay
   String getID ();
 
   /**
+   * Get the unit code source
+   *
    * @return The recommendation the code was defined in. Never <code>null</code>.
    */
   @NonNull
   EUnitCodeSource getSource ();
 
   /**
+   * Get the English name of the unit
+   *
    * @return The English name of the unit, as published by UN/ECE. Neither <code>null</code> nor
    *         empty.
    */
@@ -56,10 +62,10 @@ public interface IUnitCode extends IHasID <String>, IHasDisplayName, IHasDisplay
   String getDisplayName ();
 
   /**
-   * Get the name of the unit in the language of the passed locale. The texts come from the
-   * resource bundles <code>ph-codelists-unit_&lt;locale&gt;.properties</code> (UTF-8, the key is the
-   * code); the locale is tried from the most specific to the most general one. If no bundle has the
-   * code, the English name is returned.
+   * Get the name of the unit in the language of the passed locale. The texts come from the resource
+   * bundles <code>ph-codelists-unit_&lt;locale&gt;.properties</code> (UTF-8, the key is the code);
+   * the locale is tried from the most specific to the most general one. If no bundle has the code,
+   * the English name is returned.
    *
    * @param aContentLocale
    *        The locale to use. May not be <code>null</code>.
