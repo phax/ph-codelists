@@ -1,5 +1,12 @@
 # ph-codelists
 
+<!-- ph-badge-start -->
+[![Sonatype Central](https://maven-badges.sml.io/sonatype-central/com.helger.codelists/ph-codelists-parent-pom/badge.svg)](https://maven-badges.sml.io/sonatype-central/com.helger.codelists/ph-codelists-parent-pom/)
+[![javadoc](https://javadoc.io/badge2/com.helger.codelists/ph-codelists-unit/javadoc.svg)](https://javadoc.io/doc/com.helger.codelists/ph-codelists-unit)
+
+> If this project saved you some time or made your day a little easier, a star would mean a lot — it helps others find it too.
+<!-- ph-badge-end -->
+
 Code lists that are too big or too general for an enum, or that are used by more than one project.
 Every list comes with its English names and a language fall back: translated names are looked up from the
 most specific to the most general locale, and the English name is the last resort.
