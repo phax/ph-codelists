@@ -78,6 +78,23 @@ public final class UnitCodesTest
   }
 
   @Test
+  public void testGermanUmlautsAreLoadedAsUtf8 ()
+  {
+    // Unicode escapes, so that the result does not depend on the source file encoding
+    final IUnitCode aRoentgen = UnitCodes.getFromIDOrNull ("2C");
+    assertNotNull (aRoentgen);
+    assertEquals ("Röntgen", aRoentgen.getDisplayText (Locale.GERMAN));
+
+    final IUnitCode aContainer = UnitCodes.getFromIDOrNull ("20");
+    assertNotNull (aContainer);
+    assertEquals ("Zwanzig-Fuß-Container", aContainer.getDisplayText (Locale.GERMAN));
+
+    final IUnitCode aMilitary = UnitCodes.getFromIDOrNull ("15");
+    assertNotNull (aMilitary);
+    assertEquals ("Stick, militärisch", aMilitary.getDisplayText (Locale.GERMAN));
+  }
+
+  @Test
   public void testGermanForAllCodes ()
   {
     final IUnitCode aKilogram = UnitCodes.getFromIDOrNull ("KGM");
