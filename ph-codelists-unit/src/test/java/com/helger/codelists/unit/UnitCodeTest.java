@@ -57,10 +57,10 @@ public final class UnitCodeTest
   @Test
   public void testTranslation ()
   {
-    // Texts come from ph-codelists-unit_de.properties in src/test/resources
+    // Texts come from ph-codelists-unit_de.properties
     final UnitCode aSut = new UnitCode ("KGM", EUnitCodeSource.REC20, "kilogram");
-    assertEquals ("Kilogramm (Test)", aSut.getDisplayText (Locale.GERMAN));
-    assertEquals ("Kilogramm (Test)", aSut.getDisplayText (Locale.GERMANY));
+    assertEquals ("Kilogramm", aSut.getDisplayText (Locale.GERMAN));
+    assertEquals ("Kilogramm", aSut.getDisplayText (Locale.GERMANY));
     assertEquals ("kilogram", aSut.getDisplayText (Locale.FRENCH));
   }
 }

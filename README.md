@@ -26,9 +26,11 @@ UnitCodes.containsID ("C62");            // true
   workbook.
 * **Why no enum:** the static initializer of an enum with 2162 constants exceeds the 64 KB limit of the JVM.
   The data are read lazily from the TSV resource instead.
+* **German names:** `ph-codelists-unit_de.properties` contains a German name for each of the 2162 codes. UN/ECE
+  publishes the lists in English only, so these names are **machine translated** from the English names and have not
+  been reviewed by a native speaker. Corrections are welcome as contributions.
 * **Other languages:** add `ph-codelists-unit_<locale>.properties` (UTF-8, key is the code) to the classpath, in
-  your project or as a contribution to this one. The library ships none, because UN/ECE publishes the lists in
-  English only.
+  your project or as a contribution to this one. Any locale without a bundle falls back to the English name.
 
 # Building
 
@@ -41,4 +43,4 @@ mvn clean install
 # News and noteworthy
 
 v1.0.0 - work in progress
-* Initial version with `ph-codelists-unit`
+* Initial version with `ph-codelists-unit`, including machine translated German names

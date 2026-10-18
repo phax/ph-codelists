@@ -72,8 +72,26 @@ public final class UnitCodesTest
   {
     final IUnitCode aKilogram = UnitCodes.getFromIDOrNull ("KGM");
     assertNotNull (aKilogram);
-    // The library ships no other languages, and the tests only have a bundle for German
+    // The library ships German only
     for (final Locale aLocale : new Locale [] { Locale.ENGLISH, Locale.US, Locale.FRENCH, Locale.ROOT })
       assertEquals ("kilogram", aKilogram.getDisplayText (aLocale));
+  }
+
+  @Test
+  public void testGermanForAllCodes ()
+  {
+    final IUnitCode aKilogram = UnitCodes.getFromIDOrNull ("KGM");
+    assertNotNull (aKilogram);
+    assertEquals ("kilogram", aKilogram.getDisplayText (Locale.UK));
+    assertEquals ("kilogram", aKilogram.getDisplayText (Locale.ENGLISH));
+    assertEquals ("Kilogramm", aKilogram.getDisplayText (Locale.GERMAN));
+    assertEquals ("Kilogramm", aKilogram.getDisplayText (Locale.GERMANY));
+
+    for (final IUnitCode aUnit : UnitCodes.getAll ())
+    {
+      final String sText = aUnit.getDisplayText (Locale.GERMAN);
+      assertNotNull (aUnit.getID (), sText);
+      assertFalse (aUnit.getID (), sText.isBlank ());
+    }
   }
 }

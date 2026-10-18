@@ -27,6 +27,7 @@ import java.util.List;
 import org.jspecify.annotations.NonNull;
 import org.jspecify.annotations.Nullable;
 
+import com.helger.annotation.Nonnegative;
 import com.helger.annotation.concurrent.Immutable;
 import com.helger.annotation.style.ReturnsMutableCopy;
 import com.helger.base.io.nonblocking.NonBlockingBufferedReader;
@@ -109,6 +110,7 @@ public final class UnitCodes
   /**
    * @return The number of codes in the list.
    */
+  @Nonnegative
   public static int getCount ()
   {
     return SingletonHolder.MAP.size ();
