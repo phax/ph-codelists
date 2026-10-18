@@ -31,7 +31,7 @@ UnitCodes.containsID ("C62");            // true
   It is the list BT-130 and BT-150 of EN 16931 refer to and merges Rec 20 (1756 codes) and Rec 21
   (406 codes). `src/etc/create-unit-codes.py` regenerates `codelists/unece-units.tsv` from a new
   workbook.
-* **Why no enum:** the static initializer of an enum with 2162 constants exceeds the 64 KB limit of the JVM.
+* **Why no enum:** the static initialiser of an enum with 2162 constants exceeds the 64 KB limit of the JVM.
   The data are read lazily from the TSV resource instead.
 * **German names:** `ph-codelists-unit_de.properties` contains a German name for each of the 2162 codes. UN/ECE
   publishes the lists in English only, so these names are machine translated from the English names and were

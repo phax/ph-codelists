@@ -43,7 +43,7 @@ import com.helger.collection.commons.ICommonsOrderedMap;
  * <p>
  * The data are the sheet <code>Unit</code> of the EN 16931 code list workbook, which is the list
  * that BT-130 and BT-150 of EN 16931 refer to. They do not fit into an enum - the static
- * initializer of an enum of that size exceeds the limit of the JVM - and are therefore read lazily
+ * initialiser of an enum of that size exceeds the limit of the JVM - and are therefore read lazily
  * from the resource <code>codelists/unece-units.tsv</code>.
  *
  * @author Philip Helger
