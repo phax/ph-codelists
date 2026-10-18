@@ -27,7 +27,7 @@
   </parent>
   <groupId>com.helger.codelists</groupId>
   <artifactId>ph-codelists-parent-pom</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>ph-codelists-parent-pom</name>
   <description>Base POM to build the ph-codelists projects</description>
@@ -46,7 +46,7 @@
     <connection>scm:git:https://github.com/phax/ph-codelists.git</connection>
     <developerConnection>scm:git:https://github.com/phax/ph-codelists.git</developerConnection>
     <url>https://github.com/phax/ph-codelists</url>
-    <tag>ph-codelists-parent-pom-1.0.0</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <organization>
